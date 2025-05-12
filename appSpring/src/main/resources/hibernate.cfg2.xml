@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+ 
+<hibernate-configuration>
+    <session-factory>
+    
+<!-- Database connection settings -->
+        <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+        <property name="connection.username">jose</property>
+        <property name="connection.password">jose</property>
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">1</property>
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.OracleDialect</property>
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="current_session_context_class">thread</property>
+        <!-- Disable the second-level cache -->
+         <!-- property name="hibernate.cache.provider_class"  value="org.hibernate.cache.EhCacheProvider"/-->        
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>            
+             <mapping class="com.myapp.entity.City" />
+             <mapping class="com.myapp.entity.Contact" />
+		   	 <mapping class="com.myapp.entity.EmployeeEntity" />
+             <mapping class="com.myapp.entity.User" />
+             <mapping class="com.myapp.entity.Item" />
+             <mapping class="com.myapp.entity.Book" />
+             <mapping class="com.myapp.entity.Pelis" />
+    </session-factory>
+
+</hibernate-configuration>
