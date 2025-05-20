@@ -5,6 +5,8 @@ import java.io.File;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import com.myapp.entity.Item;
+
 public class HibernateUtil {
     private static final SessionFactory sessionFactory;
     static {
@@ -23,4 +25,16 @@ public class HibernateUtil {
     public static SessionFactory getSessionFactory() {
         return sessionFactory;
     }
+    
+/*	public static java.util.List <Item>  getItemsList() {
+		
+		java.util.List <Item>  itemsList =  new java.util.ArrayList<Item>();
+		itemsList = itemService.findAll(); 
+        for(Item item : itemsList) {
+            System.out.println(item.toString());
+        }  		
+		return ( itemsList);
+	}
+*/	
+	
 }

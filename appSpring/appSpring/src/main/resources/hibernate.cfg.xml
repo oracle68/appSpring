@@ -12,6 +12,7 @@
                 <mapping class="com.myapp.entity.Item" />
                 <mapping class="com.myapp.entity.Book" />
                 <mapping class="com.myapp.entity.Pelis" />
+                <mapping class="com.myapp.entity.Product" />
     </session-factory>
 
 </hibernate-configuration>

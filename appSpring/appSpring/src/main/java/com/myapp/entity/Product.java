@@ -8,10 +8,18 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 
-@Entity(name="Product")
+@Entity
 @Table(name="Product")
 
-public class Product {
+public class Product implements java.io.Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	public Product() {
+	}
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
@@ -45,5 +53,18 @@ public class Product {
 	public void setPrice(String price) {
 		this.price = price;
 	}
+	
+	public Product(Long id, String nom, String description) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.description = description;
+	}
+	
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", nom=" + nom + ", description=" + description + ", price=" + price + "]";
+	}
+	
 	
 }

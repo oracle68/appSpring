@@ -93,6 +93,8 @@
     <bean id="userDAO" class="com.myapp.dao.UserDaoImpl"> </bean>
     <bean id="contactService" class="com.myapp.service.ContactServiceImpl"></bean>
     <bean id="contactDAO" class="com.myapp.dao.ContactDaoImpl"> </bean>
+    <bean id="productDao" class="com.myapp.dao.ProductDaoImpl"> </bean>
+
 	    
 	<bean id="itemDao" class="com.myapp.dao.ItemDaoImpl">
 	 	<property name="sessionFactory" ref="sessionFactory"></property>
@@ -103,7 +105,8 @@
 	 	<property name="sessionFactory" ref="sessionFactory"></property>
 	 </bean>
 	<bean id="pelisService" class="com.myapp.service.PelisServiceImpl"> </bean>
-
+	 <bean id="productService" class="com.myapp.service.ProductServiceImpl"> </bean>
+	 
 	 <bean id="springApplicationContext" class="com.myapp.util.SpringApplicationContext"/>
 	             
 </beans>
