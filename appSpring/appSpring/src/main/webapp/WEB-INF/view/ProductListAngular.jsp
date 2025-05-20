@@ -7,7 +7,7 @@
 <body ng-app ng-controller="MyFilter">
  AngularJSProductList
 
-<table>
+<table border="1">
 <tr>
   <td>id</td>
   <td>nom</td>
@@ -24,7 +24,7 @@
        function MyFilter($scope,$http)
   {           
      
-    	   $http.get('productListJson')
+    	   $http.get('productList')
    	    .success(function (response){
    	        $scope.lista = response;
    	        console.log($scope.lista);

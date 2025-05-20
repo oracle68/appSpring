@@ -23,6 +23,14 @@ public class ProductDaoImpl implements ProductDao{
 	public List<Product> findAll() {
 		 return sessionFactory.getCurrentSession().createQuery("from Product").list(); 
 	}
+	
+	@Override
+	public List<Product> findAllOrderById() {
+		 return sessionFactory.getCurrentSession().createQuery("from Product order by id").list(); 
+	}
+
+
+	
 	@Override
 	public void addProduct(Product product) {
 		sessionFactory.getCurrentSession().save(product);

@@ -9,7 +9,9 @@ public interface ProductService {
 	Product findById(long Id);
 
 	List<Product> findAll();
-
+	
+	List<Product> findAllOrderById();
+	
 	void addProduct(Product product);
 
 	void deleteProduct(long Id);
