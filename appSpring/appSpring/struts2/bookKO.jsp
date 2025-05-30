@@ -1,1 +1,0 @@
-<html>  <jsp:include page="altaBook.jsp"></jsp:include>  </html>
