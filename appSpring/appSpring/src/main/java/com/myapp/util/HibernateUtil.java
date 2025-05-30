@@ -17,6 +17,7 @@ public class HibernateUtil {
         
         } catch (Throwable ex) {
             // Make sure you log the exception, as it might be swallowed
+        	System.out.println("Initial SessionFactory creation failed." + ex);
             System.err.println("Initial SessionFactory creation failed." + ex);
             throw new ExceptionInInitializerError(ex);
         }
@@ -26,15 +27,5 @@ public class HibernateUtil {
         return sessionFactory;
     }
     
-/*	public static java.util.List <Item>  getItemsList() {
-		
-		java.util.List <Item>  itemsList =  new java.util.ArrayList<Item>();
-		itemsList = itemService.findAll(); 
-        for(Item item : itemsList) {
-            System.out.println(item.toString());
-        }  		
-		return ( itemsList);
-	}
-*/	
-	
+
 }
