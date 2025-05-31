@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD  
+ Struts Configuration 2.3//EN"   
+"http://struts.apache.org/dtds/struts-2.3.dtd">  
+<struts>  
+<constant name="struts.devMode" value="false" />
+ <constant name="struts.objectFactory" value="org.apache.struts2.spring.StrutsSpringObjectFactory" />
+ 
+<package name="default" namespace="/struts2" extends="struts-default">  
+
+<action name="altaBook" class="com.myapp.struts2.BookForm">
+<result name="error">/bookKO.jsp</result> 
+<result name="success">/bookOK.jsp</result>
+</action> 
+  
+
+
+</package>  
+</struts>  
